@@ -1,4 +1,14 @@
-This repository contains all of the files necessary for the CloudHarmony 
-speedtest (http://cloudharmony.com/speedtest). To install simply clone this
-repository or download an extract the contents of files.zip into a web 
-accessible directory.
+This repository contains test files used by the CloudHarmony network test 
+harness (see https://github.com/cloudharmony/network). The test harness 
+facilitates measurement of network characteristics including latency, 
+throughput and DNS query performance. The files in this repository must be 
+present on test nodes for downlink throughput tests. To install, clone this 
+repository into an http accessible path on each test node (as designated by the
+--throughput_uri runtime argument).
+
+NOTE: This repository does not contain the 500MB test file due to github large
+file restrictions. To use this size in downlink tests, either create the file 
+manually using `dd if=/dev/urandom of=test500mb.bin bs=524288000 count=1` or 
+download the full set of test files from 
+http://cloudfront.cloudharmony.net/probe.tgz
+
