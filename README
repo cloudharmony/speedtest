@@ -6,9 +6,9 @@ present on test nodes for downlink throughput tests. To install, clone this
 repository into an http accessible path on each test node (as designated by the
 --throughput_uri runtime argument).
 
-NOTE: This repository does not contain the 500MB test file due to github large
-file restrictions. To use this size in downlink tests, either create the file 
-manually using `dd if=/dev/urandom of=test500mb.bin bs=524288000 count=1` or 
-download the full set of test files from 
-http://cloudfront.cloudharmony.net/probe.tgz
+NOTE: This repository does not contain the 500MB or 1GB test files due to 
+github large file restrictions. To use this size file, create the files 
+manually using: 
 
+`dd if=/dev/urandom of=test500mb.bin bs=1024 count=524288`
+`dd if=/dev/urandom of=test1gb.bin bs=1024 count=1048576`
