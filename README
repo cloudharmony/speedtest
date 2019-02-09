@@ -6,9 +6,10 @@ present on test nodes for downlink throughput tests. To install, clone this
 repository into an http accessible path on each test node (as designated by the
 --throughput_uri runtime argument).
 
-NOTE: This repository does not contain the 500MB or 1GB test files due to 
-github large file restrictions. To use this size file, create the files 
+NOTE: This repository does not contain the 500MB, 1GB or 10GB test files due 
+to github large file restrictions. To use this size file, create the files 
 manually using: 
 
 dd if=/dev/urandom of=test500mb.bin bs=1024 count=524288
 dd if=/dev/urandom of=test1gb.bin bs=1024 count=1048576
+dd if=/dev/urandom of=test10gb.bin bs=10240 count=1048576
